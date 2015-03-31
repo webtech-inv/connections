@@ -1,0 +1,22 @@
+glibc.i686 glibc.x86_64 
+libstdc++.i686 
+libstdc++.x86_64 
+nspr.i686 
+nspr.x86_64 
+nss.i686 
+nss.x86_64 
+openmotif.i686 
+openmotif.x86_64
+compat-libstdc++-33.i686
+compat-libstdc++-33.x86_64
+
+compat-libstdc++-33.i686
+compat-libstdc++-33.i686
+
+libXp.i686
+libXp.x86_64
+libXmu.i686
+libXmu.x86_64
+
+libXtst.x86_64
+libXtst.i686
