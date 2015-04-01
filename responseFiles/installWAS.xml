@@ -1,17 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <agent-input>
   <variables>
-    <variable name='sharedLocation' value='/opt/IBM/IMShared'/>
+    <variable name='IIM_SHARED'/>
+    <variable name='SOURCES'/>
+    <variable name='WAS'/>
+    <variable name='HTTP'/>
+    <variable name='WAS_PLUGIN'/>
+    <variable name='WAS_TOOL'/>
+    <variable name='WAS_WCT'/>
   </variables>
   <server>
-    <repository location='/media/sf_Downloads/connections/installation_files/WASND_v8.5.5'/>
-    <repository location='/media/sf_Downloads/connections/installation_files/WAS_V8.5.5_SUPPL'/>
-    <repository location='/media/sf_Downloads/connections/cr2/8.5.5-WS-WAS-FP0000003'/>
-    <repository location='/media/sf_Downloads/connections/cr2/8.5.5-WS-WASSupplements-FP0000003'/>
-    <repository location='/media/sf_Downloads/connections/cr2/8.5.5-WS-WCT-FP0000003'/>
+    <repository location='${SOURCES}/WASND_v8.5.5'/>
+    <repository location='${SOURCES}/WAS_V8.5.5_SUPPL'/>
+    <repository location='${SOURCES}/8.5.5-WS-WAS-FP0000003'/>
+    <repository location='${SOURCES}/8.5.5-WS-WCT-FP0000003'/>
+    <repository location='${SOURCES}/8.5.5-WS-WASSupplements-FP0000003'/>
   </server>
-  <profile id='IBM HTTP Server V8.5' installLocation='/opt/IBM/HTTPServer'>
-    <data key='eclipseLocation' value='/opt/IBM/HTTPServer'/>
+  <profile id='IBM HTTP Server V8.5' installLocation='{HTTP}'>
+    <data key='eclipseLocation' value='{HTTP}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -25,8 +31,8 @@
     <!-- IBM HTTP Server for WebSphere Application Server 8.5.5.3 -->
     <offering profile='IBM HTTP Server V8.5' id='com.ibm.websphere.IHS.v85' version='8.5.5003.20140730_1249' features='core.feature,arch.64bit' installFixes='none'/>
   </install>
-  <profile id='IBM WebSphere Application Server V8.5' installLocation='/opt/IBM/WebSphere/AppServer'>
-    <data key='eclipseLocation' value='/opt/IBM/WebSphere/AppServer'/>
+  <profile id='IBM WebSphere Application Server V8.5' installLocation='{WAS}'>
+    <data key='eclipseLocation' value='{WAS}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -37,8 +43,8 @@
     <!-- IBM WebSphere Application Server Network Deployment 8.5.5.3 -->
     <offering profile='IBM WebSphere Application Server V8.5' id='com.ibm.websphere.ND.v85' version='8.5.5003.20140730_1249' features='core.feature,ejbdeploy,thinclient,embeddablecontainer,com.ibm.sdk.6_64bit' installFixes='none'/>
   </install>
-  <profile id='Web Server Plug-ins for IBM WebSphere Application Server V8.5' installLocation='/opt/IBM/WebSphere/Plugins'>
-    <data key='eclipseLocation' value='/opt/IBM/WebSphere/Plugins'/>
+  <profile id='Web Server Plug-ins for IBM WebSphere Application Server V8.5' installLocation='{WAS_PLUGIN}'>
+    <data key='eclipseLocation' value='{WAS_PLUGIN}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -49,8 +55,8 @@
     <!-- Web Server Plug-ins for IBM WebSphere Application Server 8.5.5.3 -->
     <offering profile='Web Server Plug-ins for IBM WebSphere Application Server V8.5' id='com.ibm.websphere.PLG.v85' version='8.5.5003.20140730_1249' features='core.feature,com.ibm.jre.6_64bit' installFixes='none'/>
   </install>
-  <profile id='WebSphere Customization Toolbox V8.5' installLocation='/opt/IBM/WebSphere/Toolbox'>
-    <data key='eclipseLocation' value='/opt/IBM/WebSphere/Toolbox'/>
+  <profile id='WebSphere Customization Toolbox V8.5' installLocation='{WAS_WCT}'>
+    <data key='eclipseLocation' value='{WAS_WCT}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -61,7 +67,7 @@
     <!-- WebSphere Customization Toolbox  8.5.5.3 -->
     <offering profile='WebSphere Customization Toolbox V8.5' id='com.ibm.websphere.WCT.v85' version='8.5.5003.20140730_1249' features='core.feature,pct' installFixes='none'/>
   </install>
-  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${IIM_SHARED}'/>
   <preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
   <preference name='com.ibm.cic.common.core.preferences.readTimeout' value='45'/>
   <preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
