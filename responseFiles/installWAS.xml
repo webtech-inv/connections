@@ -16,8 +16,8 @@
     <repository location='${SOURCES}/8.5.5-WS-WCT-FP0000003'/>
     <repository location='${SOURCES}/8.5.5-WS-WASSupplements-FP0000003'/>
   </server>
-  <profile id='IBM HTTP Server V8.5' installLocation='{HTTP}'>
-    <data key='eclipseLocation' value='{HTTP}'/>
+  <profile id='IBM HTTP Server V8.5' installLocation='${HTTP}'>
+    <data key='eclipseLocation' value='${HTTP}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -31,8 +31,8 @@
     <!-- IBM HTTP Server for WebSphere Application Server 8.5.5.3 -->
     <offering profile='IBM HTTP Server V8.5' id='com.ibm.websphere.IHS.v85' version='8.5.5003.20140730_1249' features='core.feature,arch.64bit' installFixes='none'/>
   </install>
-  <profile id='IBM WebSphere Application Server V8.5' installLocation='{WAS}'>
-    <data key='eclipseLocation' value='{WAS}'/>
+  <profile id='IBM WebSphere Application Server V8.5' installLocation='${WAS}'>
+    <data key='eclipseLocation' value='${WAS}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -43,8 +43,8 @@
     <!-- IBM WebSphere Application Server Network Deployment 8.5.5.3 -->
     <offering profile='IBM WebSphere Application Server V8.5' id='com.ibm.websphere.ND.v85' version='8.5.5003.20140730_1249' features='core.feature,ejbdeploy,thinclient,embeddablecontainer,com.ibm.sdk.6_64bit' installFixes='none'/>
   </install>
-  <profile id='Web Server Plug-ins for IBM WebSphere Application Server V8.5' installLocation='{WAS_PLUGIN}'>
-    <data key='eclipseLocation' value='{WAS_PLUGIN}'/>
+  <profile id='Web Server Plug-ins for IBM WebSphere Application Server V8.5' installLocation='${WAS_PLUGIN}'>
+    <data key='eclipseLocation' value='${WAS_PLUGIN}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
@@ -55,8 +55,8 @@
     <!-- Web Server Plug-ins for IBM WebSphere Application Server 8.5.5.3 -->
     <offering profile='Web Server Plug-ins for IBM WebSphere Application Server V8.5' id='com.ibm.websphere.PLG.v85' version='8.5.5003.20140730_1249' features='core.feature,com.ibm.jre.6_64bit' installFixes='none'/>
   </install>
-  <profile id='WebSphere Customization Toolbox V8.5' installLocation='{WAS_WCT}'>
-    <data key='eclipseLocation' value='{WAS_WCT}'/>
+  <profile id='WebSphere Customization Toolbox V8.5' installLocation='${WAS_WCT}'>
+    <data key='eclipseLocation' value='${WAS_WCT}'/>
     <data key='user.import.profile' value='false'/>
     <data key='cic.selector.os' value='linux'/>
     <data key='cic.selector.arch' value='x86'/>
