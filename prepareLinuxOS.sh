@@ -10,4 +10,7 @@ ulimit -n 8192
 
 yum install $(cat linuxLibraries.txt)
 
+#Install IIM
 mkdir -p /opt/IBM/IIM
+unzip agent.installer.linux.gtk.x86_1.8.1000.20141126_2002.zip -d agent.installer.linux.gtk.x86_1.8.1000.20141126_2002
+./installc -log /opt/software/log/IIM.log -acceptLicense -installationDirectory /opt/IBM/IIM -showProgress
