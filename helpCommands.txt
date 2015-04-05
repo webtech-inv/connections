@@ -1,6 +1,10 @@
 ##Create WAS response file with IIM:
 /opt/IBM/IIM/eclipse/IBMIM -record /opt/InstallFiles/ResponseFiles/install_WAS.xml -skipInstall /opt/InstallFiles/Skipped
 
+##Install IIM
+./installc -log /opt/software/log/IIM.log -acceptLicense -installationDirectory /opt/IBM/IIM -showProgress
+
+
 ##Install WAS with response file:
 
 /opt/IBM/IIM/eclipse/tools/imcl
