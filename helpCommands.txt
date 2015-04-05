@@ -1,9 +1,0 @@
-##Create WAS response file with IIM:
-/opt/IBM/IIM/eclipse/IBMIM -record /opt/InstallFiles/ResponseFiles/install_WAS.xml -skipInstall /opt/InstallFiles/Skipped
-
-##Install WAS with response file:
-
-/opt/IBM/IIM/eclipse/tools/imcl
--input /opt/InstallFiles/ResponseFiles/install_WAS.xml
--acceptLicense -showProgress
--variables HTTP=/opt/IBM/HTTPServer, WAS=/opt/IBM/WebSphere/AppServer, WAS_PLUGIN=/opt/IBM/WebSphere/Plugins, WAS_WCT=/opt/IBM/WebSphere/Toolbox, IIM_SHARED=/opt/IBM/IMShared, INSTALL_PATH=/opt/software/
