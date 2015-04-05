@@ -44,3 +44,4 @@ cairo.x86_64
 cairo.i686
 xauth
 xterm
+dejavu-lgc-sans-fonts
