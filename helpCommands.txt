@@ -10,4 +10,4 @@
 /opt/IBM/IIM/eclipse/tools/imcl -input /opt/InstallFiles/ResponseFiles/install_WAS.xml -acceptLicense -showProgress -variables HTTP=/opt/IBM/HTTPServer,WAS=/opt/IBM/WebSphere/AppServer,WAS_PLUGIN=/opt/IBM/WebSphere/Plugins,WAS_WCT=/opt/IBM/WebSphere/Toolbox,IIM_SHARED=/opt/IBM/IMShared,SOURCES=/opt/software/
 
 #Unzip all sources
-unzip "WAS_V8.5.5_SUPPL_*_OF_3.zip" -d WAS_V8.5.5_SUPPL ; unzip "8.5.5-WS-WAS-FP0000002-part*.zip" -d 8.5.5-WS-WAS-FP0000002 ; unzip "8.5.5-WS-WASSupplements-FP0000002-part*.zip" -d 8.5.5-WS-WASSupplements-FP0000002 ; unzip 8.5.5-WS-WCT-FP0000003.zip -d 8.5.5-WS-WCT-FP0000003 ; unzip "WASND_v8.5.5_*of3.zip" -d WASND_v8.5.5
+unzip "WAS_V8.5.5_SUPPL_*_OF_3.zip" -d WAS_V8.5.5_SUPPL ; unzip "8.5.5-WS-WAS-FP0000003-part*.zip" -d 8.5.5-WS-WAS-FP0000003 ; unzip "8.5.5-WS-WASSupplements-FP0000003-part*.zip" -d 8.5.5-WS-WASSupplements-FP0000003 ; unzip 8.5.5-WS-WCT-FP0000003.zip -d 8.5.5-WS-WCT-FP0000003 ; unzip "WASND_v8.5.5_*of3.zip" -d WASND_v8.5.5
