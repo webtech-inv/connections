@@ -1,6 +1,9 @@
 ##Create WAS response file with IIM:
 /opt/IBM/IIM/eclipse/IBMIM -record /opt/InstallFiles/ResponseFiles/install_WAS.xml -skipInstall /opt/InstallFiles/Skipped
 
+##Create Conn response file with IIM:
+/opt/IBM/IIM/eclipse/IBMIM -record /opt/InstallFiles/ResponseFiles/install_Conn5.xml -skipInstall /opt/InstallFiles/Skipped
+
 ##Install IIM
 ./installc -log /opt/software/log/IIM.log -acceptLicense -installationDirectory /opt/IBM/IIM -showProgress
 
@@ -11,3 +14,16 @@
 
 #Unzip all sources
 unzip "WAS_V8.5.5_SUPPL_*_OF_3.zip" -d WAS_V8.5.5_SUPPL ; unzip "8.5.5-WS-WAS-FP0000003-part*.zip" -d 8.5.5-WS-WAS-FP0000003 ; unzip "8.5.5-WS-WASSupplements-FP0000003-part*.zip" -d 8.5.5-WS-WASSupplements-FP0000003 ; unzip 8.5.5-WS-WCT-FP0000003.zip -d 8.5.5-WS-WCT-FP0000003 ; unzip "WASND_v8.5.5_*of3.zip" -d WASND_v8.5.5
+
+
+#install DB2
+/opt/InstallFiles/DB2/universal/db2setup -r /opt/InstallFiles/ResponseFiles/install_DB2.rsp -l /opt/IBM/log/db2.log
+
+#Create TDI response file
+./install_tdiv711_linux_x86_64.bin -r /opt/InstallFiles/ ResponseFiles/install_TDI2.rsp
+
+#install TDI
+/opt/InstallFiles/TDI/Server/linux_x86_64/install_tdiv711_linux_x86_64.bin -i silent –f /opt/InstallFiles/ResponseFiles/install_TDI.rsp
+
+#install Conn
+/opt/IBM/IIM/eclipse/tools/imcl -input /opt/InstallFiles/ResponseFiles/install_conn5_template.xml -log /opt/InstallFiles/log/Conn5.xml -silent -acceptLicense -showProgress
