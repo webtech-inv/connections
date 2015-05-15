@@ -8,7 +8,8 @@ umask 022
 echo "* - nofile 8192" > /etc/security/limits.d/ibm.conf
 ulimit -n 8192
 
-yum install $(cat linuxLibraries.txt)
+#install dependencies
+yum install $(cat linuxLibraries.txt) -y
 
 #Install IIM
 mkdir -p /opt/IBM/IIM
